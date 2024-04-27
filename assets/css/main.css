@@ -6477,8 +6477,8 @@ Default Tab Style
   text-align: center;
   background-color: #0a0b0f;
   border: 3px solid var(--tg-common-color-teal);
-  width: 195px;
-  height: 160px;
+  width: 100px;
+  height: 100px;
   position: relative;
   margin: 0 0 5px;
 }
