@@ -1,11 +1,18 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{{ page.site_title }}</title>
-    <meta name="description" content="eSports and Gaming NFT Template">
+    <meta charset="utf-8">
+    <meta name="author" content="Hectiq">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="{{site.site_description }}">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Linkedin required tags -->
+    <meta property='og:title' content='Home - Los Pingheros'/>
+    <meta property='og:image' content='{{site.url}}/assets/images/artworks/hectiq_main_artwork.jpg'/>
+    <meta property='og:description' content='{{site.site_description }}'/>
+    <meta property='og:url' content='{{site.url }}'/>
     <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="{{site.url}}/assets/img/favicon.png">
 
@@ -66,6 +73,8 @@
     {% if page.private == true %}
     {% include authentication.html %}
     {% endif %}
+
+    {% include cookie-consent.html %}
     
 </body>
 
