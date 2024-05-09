@@ -71,7 +71,7 @@
   --tg-common-color-black-7: #040608;
   --tg-common-color-black-8: #0d141b;
   --tg-common-color-black-9: #111922;
-  --tg-body-color: #adb0bc;
+  --tg-body-color: #ffffff;
   --tg-heading-color: #fff;
   --tg-theme-primary: #f99237;
   --tg-theme-secondary: #f14903;
@@ -230,9 +230,9 @@ textarea {
 }
 
 input[type=color] {
-  appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
+  appearance: none;
   background: none;
   border: 0;
   cursor: pointer;
@@ -243,8 +243,8 @@ input[type=color] {
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: var(--tg-common-color-black);
 }
@@ -256,8 +256,8 @@ input[type=color] {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: var(--tg-theme-primary);
 }
 
@@ -417,8 +417,9 @@ input[type=color] {
 	1. Button style
 ===============================*/
 .btn {
-  user-select: none;
+  -webkit-user-select: none;
   -moz-user-select: none;
+  user-select: none;
   background: var(--tg-theme-primary) none repeat scroll 0 0;
   border: medium none;
   border-radius: 2px;
@@ -646,8 +647,8 @@ input[type=color] {
   background: transparent;
   border: none;
   white-space: nowrap;
-  font-size: 16px;
-  padding: 15px 25px;
+  font-size: 140px;
+  padding: 15px 250px;
   line-height: 1;
   position: relative;
   z-index: 1;
@@ -657,8 +658,8 @@ input[type=color] {
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
-  width: 300px;
-  height: 61px;
+  width: 600px;
+  height: 161px;
 }
 @media (max-width: 767.98px) {
   .tg-btn-3 {
@@ -1034,7 +1035,7 @@ html.show-preloader body {
   display: block;
   width: 100%;
   background: transparent;
-  background-image:  url(../images/buttons/Bouton_Large.png);
+  background-image:  url(../images/buttons/Button_Pingheros.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -1167,11 +1168,11 @@ html.show-preloader body {
   height: 100%;
   z-index: 99;
   background: var(--tg-common-color-black-9);
-  transition: all 700ms ease;
   -moz-transition: all 700ms ease;
   -webkit-transition: all 700ms ease;
   -ms-transition: all 700ms ease;
   -o-transition: all 700ms ease;
+  transition: all 700ms ease;
   opacity: 0;
   visibility: hidden;
   cursor: none;
@@ -2149,11 +2150,11 @@ Default Tab Style
   height: 100%;
   z-index: 99;
   border-radius: 0px;
-  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -moz-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -ms-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86) e;
   -o-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -webkit-transform: translateX(101%);
   -moz-transform: translateX(101%);
   -ms-transform: translateX(101%);
@@ -2325,11 +2326,11 @@ Default Tab Style
   width: 100%;
   height: 100%;
   z-index: 2;
-  transition: all 700ms ease;
   -moz-transition: all 700ms ease;
   -webkit-transition: all 700ms ease;
   -ms-transition: all 700ms ease;
   -o-transition: all 700ms ease;
+  transition: all 700ms ease;
   opacity: 0;
   visibility: hidden;
   background: rgba(0, 0, 0, 0.5);
@@ -2369,11 +2370,11 @@ Default Tab Style
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
   border: 1px solid var(--tg-border-2);
-  border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
+  border-radius: 3px;
 }
 .tgmobile__menu .social-links ul li a:hover {
   border-color: var(--tg-theme-primary);
@@ -6487,8 +6488,8 @@ Default Tab Style
   justify-content: center;
   text-align: center;
   background-color: #00000000;
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   position: relative;
   margin: 0 0 5px;
 }
@@ -6509,10 +6510,34 @@ Default Tab Style
   z-index: -1; /* Ensures the pseudo-element stays behind the content */
 }
 
+.social__item.discord::before {
+  background-image: url(../images/buttons/Circular_Button_discord.png);
+}
+
+.social__item.twitch::before {
+  background-image: url(../images/buttons/Circular_Button_twitch.png);
+}
+
+.social__item.youtube::before {
+  background-image: url(../images/buttons/Circular_Button_youtube.png);
+}
+
+.social__item.facebook::before {
+  background-image: url(../images/buttons/Circular_Button_facebook.png);
+}
+
+.social__item.instagram::before {
+  background-image: url(../images/buttons/Circular_Button_instagram.png);
+}
+
+.social__item.x::before {
+  background-image: url(../images/buttons/Circular_Button_x.png);
+}
+
 @media (max-width: 1199.98px) {
   .social__item a {
     width: 100%;
-    height: 115px;
+    height: 85px;
   }
 }
 .social__item a svg {
@@ -6523,7 +6548,7 @@ Default Tab Style
   bottom: -8px;
 }
 .social__item a i {
-  font-size: 44px;
+  font-size: 60px;
   color: #d8d8d8;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
@@ -6540,11 +6565,11 @@ Default Tab Style
   display: block;
   text-transform: uppercase;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: var(--tg-fw-medium);
   letter-spacing: 2px;
   line-height: 1;
-  margin: 22px 0 0;
+  margin: 10px 0 0;
 }
 @media (max-width: 1199.98px) {
   .social__item a span {
@@ -8178,8 +8203,8 @@ Default Tab Style
   letter-spacing: 1px;
   background-color: var(--tg-theme-primary);
   border: none;
-  -webkit-clip-path: path("M8,0H152a8,8,0,0,1,8,8V33.63C160,37.36,140,53,140,53H8a8,8,0,0,1-8-8V8A8,8,0,0,1,8,0Z");
-  clip-path: path("M8,0H152a8,8,0,0,1,8,8V33.63C160,37.36,140,53,140,53H8a8,8,0,0,1-8-8V8A8,8,0,0,1,8,0Z");
+  /* -webkit-clip-path: path("M8,0H152a8,8,0,0,1,8,8V33.63C160,37.36,140,53,140,53H8a8,8,0,0,1-8-8V8A8,8,0,0,1,8,0Z");
+  clip-path: path("M8,0H152a8,8,0,0,1,8,8V33.63C160,37.36,140,53,140,53H8a8,8,0,0,1-8-8V8A8,8,0,0,1,8,0Z"); */
 }
 .shop__details-cart-btn:hover {
   color: var(--tg-common-color-black);
@@ -10150,8 +10175,8 @@ blockquote p {
 ===============================*/
 .underlay-effect {
   text-shadow: 
-    -2px 2px 0px var(--tg-theme-primary),   /* Horizontal shadow */
-    -1px 1px 0 var(--tg-theme-primary);  /* Mimic an underlay with shadow */
+    -2px 2px 0px var(--tg-common-color-black),   /* Horizontal shadow */
+    -1px 1px 0 var(--tg-common-color-black);  /* Mimic an underlay with shadow */
 }
 .bg-dark {
   padding: 310px 0 495px;
@@ -10195,4 +10220,48 @@ blockquote p {
   background: rgba(0,0,0,0.5); /* Black overlay with 50% opacity */
   z-index: 1;
 }
+
+
+.steam_button {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: var(--tg-heading-font-family);
+  color: var(--tg-common-color-black-2);
+  font-weight: var(--tg-fw-extra-bold);
+  background: transparent;
+  border: none;
+  white-space: nowrap;
+  font-size: 140px;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  width: 600px;
+  height: 161px;
+}
+@media (max-width: 767.98px) {
+  .steam_button {
+    width: 166px;
+    height: 53px;
+    padding: 13px 22px;
+    font-size: 15px;
+  }
+}
+.steam_button:hover {
+  color: var(--tg-common-color-black-2);
+}
+
+
+
 /*# sourceMappingURL=main.css.map */

@@ -21,14 +21,28 @@
 title: LosPingheros.com
 email: info@hectiq.games
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Los Pingheros is a multiplayer fighting game that can host up to 8 players online or locally. 
+  Dive into the vibrant colors of Mexico, draped in a unique snowy mantle, and engage in the action alone or with your friends. 
+  Your goal will be to become the ultimate Pinghero by knocking your opponents out of the arena using the snow!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 privacy_policy: /privacy_policy
 twitter_username: jekyllrb
 github_username:  jekyll
+
+
+keyart_url: /assets/images/artworks/LosPingheros_KeyArt_Base.png
+keylogo_url: /assets/images/logos/Los_Pingheros_Logo.png
+keylogo_url_small: /assets/images/logos/Los_Pingheros_Logo_small.png
+presskit_url: "https://www.notion.so/hectiq/LOS-PINGHEROS-Press-Kit-c325e93187ca4929bf74cc70e9f91ff2?pvs=4"
+reddit_url: "https://www.reddit.com/user/HectiqGames"
+linkedin_url: "https://www.linkedin.com/company/hectiq-games"
+facebook_url: "https://www.facebook.com/profile.php?id=61557780671331&locale=fr_FR"
+twitter_url: "https://twitter.com/HectiqGames"
+youtube_url: "https://www.youtube.com/channel/UCjDdt0owalCNcdw0f2_TfDQ"
+instagram_url: "https://www.instagram.com/hectiqgames/"
+tiktok_url: "https://www.tiktok.com/@hectiqgames"
+
 
 # Build settings
 # theme: minima
