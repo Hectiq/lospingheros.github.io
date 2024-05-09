@@ -1049,7 +1049,12 @@ html.show-preloader body {
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
+  text-transform: uppercase;
 }
+.offCanvas__newsletter-form [type=email]::placeholder {
+  opacity: 0.65; /* Ensures the color is not partially transparent, unless desired */
+}
+
 .offCanvas__newsletter-form [type=email]:focus {
   border-color: #535d68;
 }
@@ -1654,12 +1659,13 @@ Default Tab Style
   }
 }
 .section__title::after {
-  content: "";
-  display: block;
-  background-image: url(../img/bg/title_shape.svg);
+  
+  /* content: ""; */
+  display: none;
+  /* background-image: url(../img/bg/title_shape.svg);
   width: 65px;
   height: 5px;
-  margin: 20px auto 0;
+  margin: 20px auto 0; */
 }
 .section__title.title-shape-none::after {
   display: none;
@@ -2538,7 +2544,7 @@ Default Tab Style
   }
 }
 .slider__content .title {
-  margin: 0 0 21px;
+  /* margin: 0 0 21px; */
   font-size: 150px;
   font-family: var(--tg-berlin-font-family);
   line-height: 0.8;
@@ -2807,18 +2813,18 @@ Default Tab Style
 }
 
 .banner__padding {
-  padding: 310px 0 295px;
+  padding: 80px 0 125px;
   position: relative;
   z-index: 1;
 }
 @media (max-width: 1500px) {
   .banner__padding {
-    padding: 260px 0 220px;
+    padding: 60px 0 50px;
   }
 }
 @media (max-width: 767.98px) {
   .banner__padding {
-    padding: 180px 0 150px;
+    padding: 40px 0 20px;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -6488,8 +6494,8 @@ Default Tab Style
   justify-content: center;
   text-align: center;
   background-color: #00000000;
-  width: 180px;
-  height: 180px;
+  width: 100px;
+  height: 100px;
   position: relative;
   margin: 0 0 5px;
 }
@@ -6535,9 +6541,13 @@ Default Tab Style
 }
 
 @media (max-width: 1199.98px) {
+  .social__item {
+    width: 80px;
+    height: 80px;
+  }
   .social__item a {
     width: 100%;
-    height: 85px;
+    height: 45px;
   }
 }
 .social__item a svg {
@@ -6548,7 +6558,7 @@ Default Tab Style
   bottom: -8px;
 }
 .social__item a i {
-  font-size: 60px;
+  font-size: 45px;
   color: #d8d8d8;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
@@ -10252,8 +10262,8 @@ blockquote p {
 }
 @media (max-width: 767.98px) {
   .steam_button {
-    width: 166px;
-    height: 53px;
+    width: 300px;
+    height: 73px;
     padding: 13px 22px;
     font-size: 15px;
   }
@@ -10262,6 +10272,48 @@ blockquote p {
   color: var(--tg-common-color-black-2);
 }
 
+.banner_logo{
+  width: 80% ;
+  height: 80%;
+}
 
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  backdrop-filter: blur(8px); /* Blur the background */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe00;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=main.css.map */

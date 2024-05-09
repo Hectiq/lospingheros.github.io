@@ -5,14 +5,12 @@
     <div class="row justify-content-center">
       <div class="col-xl-8 col-lg-10">
         <div class="banner__content slider__content text-center">
-          <img class="title wow bounceInLeft" src="{{site.url}}/assets/images/logos/Los_Pingheros_Logo.png" alt="Los Pignheros Logo" data-wow-delay=".1s"></img>
-          <!-- <p class="wow bounceInLeft" data-wow-delay=".2s">Fun and Snow in Mexico</p> -->
-          <div class="banner__btn wow bounceInLeft" data-wow-delay=".6s"></div>
+          <img class="banner_logo title wow bounceInLeft" src="{{site.url}}/assets/images/logos/Los_Pingheros_Logo.png" alt="Los Pignheros Logo" data-wow-delay=".1s"></img>
         </div>
       </div>
     </div>
-    <div class="row mt-120">
-    <div class="row justify-content-center mt-20">
+    <div class="row">
+    <div class="row justify-content-center ">
         <div class="col">
             <div class="grand__final-button">
                 <a href="#" class="steam_button mx-auto">
@@ -21,14 +19,21 @@
             </div>
         </div>
     </div>
-    <div class="row justify-content-center mt-20">
+    <div class="row justify-content-center mt-10">
         <div class="col-xl-6 col-lg-7 col-md-10">
           <div class="section__title text-center mt-20">
-            <h2 class="small-title underlay-effect">Subscribe</h2>
-            <form action="#" class="offCanvas__newsletter-form">
-              <input type="email" placeholder="GET NEWS AND UPDATES" />
-              <button title="submit" type="submit"><i class="flaticon-send"></i></button>
-            </form>
+            
+            <!-- Trigger/Open The Modal -->
+          <button id="modalBtn">SUBSCRIBE TO OUR NEWSLETTER </button>
+
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <iframe width="540" height="505" src="https://1b469b31.sibforms.com/serve/MUIFADSrdnzBz-VY1DNOYi7L2rIws0qwV9RYU-fpJPz2IFOsRscJ-4V7ibP6U4wE6F7wYI3OVqY_IKTnsRhBMqQ3p2kA6lVvhWdxM4nTp6ighsbC46ZvuUC3qXj9L78JsH-epe8XppCy1wVg0R8vzAMqOXt8UDAaByEucVeW5DebaxF8V0tdiGPAOVC2SUJKVgW_aCrZoFblQulM" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
+              </div>
+          </div>
           </div>
         </div>
       </div>
@@ -37,15 +42,13 @@
         <div class="social__item facebook">
           <a href="{{site.facebook_url}}">
             <i class="flaticon-facebook"></i>
-            <span>facebook</span>
           </a>
         </div>
       </div>
       <div class="col">
-        <div class="social__item x">
+        <div class="social__item twitter">
           <a href="{{site.twitter_url}}">
             <i class="flaticon-twitter"></i>
-            <span>twitter</span>
           </a>
         </div>
       </div>
@@ -53,7 +56,6 @@
         <div class="social__item instagram">
           <a href="{{site.instagram_url}}">
             <i class="flaticon-instagram"></i>
-            <span>instagram</span>
           </a>
         </div>
       </div>
@@ -61,7 +63,6 @@
         <div class="social__item youtube">
           <a href="{{site.youtube_url}}">
             <i class="flaticon-youtube"></i>
-            <span>youtube</span>
           </a>
         </div>
       </div>
@@ -69,7 +70,6 @@
         <div class="social__item discord">
           <a href="{{site.discord_url}}">
             <i class="flaticon-discord"></i>
-            <span>discord</span>
           </a>
         </div>
       </div>
@@ -77,7 +77,6 @@
         <div class="social__item twitch">
           <a href="{{site.twitch_url}}">
             <i class="flaticon-twitch"></i>
-            <span>twitch</span>
           </a>
         </div>
       </div>
