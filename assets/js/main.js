@@ -848,28 +848,52 @@ function wowAnimation() {
 
 
 /*============================================= */
-// Get the modal
-var modal = document.getElementById("myModal");
+// Get the modal newsletter
+
+var newsletter_modal = document.getElementById("newsletter_modalPage");
+var newsletter_frame = document.getElementById("newsletter_frame");
 
 // Get the button that opens the modal
-var btn = document.getElementById("modalBtn");
+var newsletterBtn = document.getElementById("newsletterBtn");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
+// When the user clicks the button, open the modal
+newsletterBtn.onclick = function() {
+    newsletter_modal.style.display = "flex";
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
+
+/* ============================================= */
+// Get the modal trailer
+
+var trailer_modal = document.getElementById("trailer_modalPage");
+var trailer_frame = document.getElementById("trailer_frame_video");
+
+// Get the button that opens the modal
+var trailerBtn = document.getElementById("trailerBtn");
+
+var player;
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('youtubeVideo');
 }
 
-// When the user clicks anywhere outside of the modal, close it
+// When the user clicks the button, open the modal
+trailerBtn.onclick = function() {
+    trailer_modal.style.display = "flex";
+    $('#trailer_frame_video').each(function(){
+        this.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+      });
+}
+
+
+// When the user clicks anywhere in the window, close the modal if it was the background that was clicked
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target === newsletter_modal) {
+        newsletter_modal.style.display = "none";
+    }
+    if (event.target === trailer_modal) {
+        trailer_modal.style.display = "none";
+        $('#trailer_frame_video').each(function(){
+            this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+          });
     }
 }

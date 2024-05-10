@@ -10272,14 +10272,34 @@ blockquote p {
   color: var(--tg-common-color-black-2);
 }
 
+.callaction-button {
+  display: inline-block;
+  background-image:  url(../images/buttons/Button_Pingheros.png);
+  background-size: cover;
+  background-position: center;
+  background-color: transparent; /* Ensure background is transparent */
+  color: white; /* Initial text color */
+  font-size: 16px; /* Adjust font size as needed */
+  padding: 10px 20px; /* Padding for sizing the button */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-align: center; /* Ensure text is centered */
+  transition: color 0.3s; /* Smooth transition for text color change */
+  outline: none; /* Remove focus outline */
+}
+
+.callaction-button:hover {
+  color: var(--tg-theme-secondary); /* Text color changes to red on hover */
+}
+
 .banner_logo{
   width: 80% ;
   height: 80%;
 }
 
 /* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
+.modalFullScreen {
+  display: none; /* Hidden by default, toggle this in JavaScript */
   position: fixed; /* Stay in place */
   z-index: 10; /* Sit on top */
   left: 0;
@@ -10287,33 +10307,63 @@ blockquote p {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgba(0,0,0,0.4); /* Black with opacity */
   backdrop-filter: blur(8px); /* Blur the background */
+  align-items: center; /* Centers vertically in the viewport */
+  justify-content: center; /* Centers horizontally in the viewport */
 }
 
 /* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe00;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+.newsletter-modal-content {
+  background-color: rgba(254, 254, 254, 0); /* Fully transparent background, adjust as needed */
+  width: 40%; /* Width is 40% of its container */
+  display: flex; /* Use flexbox to align inner content */
+  align-items: center; /* Aligns content vertically center */
+  justify-content: center; /* Aligns content horizontally center */
+  text-align: center; /* Ensures text within the modal is centered */
+  padding: 20px; /* Padding around the content, uncomment if needed */
+  border: 1px solid rgba(136, 136, 136, 0); /* Optional border, uncomment if needed */
 }
 
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+@media (max-width: 1500px) {
+  .newsletter-modal-content  {
+    width: 60%;
+  }
+}
+@media (max-width: 767.98px) {
+  .newsletter-modal-content   {
+    width: 80%;
+  }
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+
+/* Modal Content/Box */
+.trailer-modal-content {
+  background-color: rgba(254, 254, 254, 0); /* Fully transparent background, adjust as needed */
+  width: 80%; /* Width is 40% of its container */
+  display: flex; /* Use flexbox to align inner content */
+  align-items: center; /* Aligns content vertically center */
+  justify-content: center; /* Aligns content horizontally center */
+  text-align: center; /* Ensures text within the modal is centered */
+  padding: 20px; /* Padding around the content, uncomment if needed */
+  border: 1px solid rgba(136, 136, 136, 0); /* Optional border, uncomment if needed */
+}
+
+@media (max-width: 1500px) {
+  .trailer-modal-content  {
+    width: 80%;
+  }
+}
+@media (max-width: 767.98px) {
+  .trailer-modal-content   {
+    width: 80%;
+  }
+}
+
+
+iframe {
+  width: 100%;
+  height: 800px;  /* Adjust height based on your design */
 }
 
 /*# sourceMappingURL=main.css.map */
