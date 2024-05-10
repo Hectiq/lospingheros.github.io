@@ -7,10 +7,15 @@
     }
 </style>
 <div id="cookie-notice">
+    <div>
     <span>WE WOULD LIKE TO USE THIRD PARTY COOKIES AND SCRIPTS TO IMPROVE THE FUNCTIONALITY OF THIS WEBSITE.</span>
-    <a id="cookie-notice-accept" class="btn btn-primary btn-sm">APPROVE</a>
-    <a id="cookie-notice-reject" class="btn btn-primary btn-sm">REJECT</a>
-    <a href="{{site.privacy_policy}}" class="btn btn-primary btn-sm">MORE INFO</a>
+    </div>
+    <div>
+        <a id="cookie-notice-accept" class="btn btn-primary btn-sm">APPROVE</a>
+        <a id="cookie-notice-reject" class="btn btn-primary btn-sm">REJECT</a>
+        <a id="cookie-notice-moreinfo" href="{{site.privacy_policy}}" class="btn btn-primary btn-sm">MORE INFO</a>
+    </div>
+    
 </div>
 <script>
     function createCookie(name,value,days) {
@@ -36,7 +41,14 @@
         createCookie(name,"",-1);
     }
 
-    if(readCookie('cookie-notice-dismissed')=='true') {
+    moreinfo_btn = document.getElementById('cookie-notice-moreinfo')
+    if (location.href.includes('privacy_policy')) {
+        moreinfo_btn.style.display = 'none';
+    }
+
+    console.log(location.href)
+
+    if(readCookie('cookie-notice-accepted')=='true') {
         var ms_clarity = document.createElement("script");
         ms_clarity.setAttribute("type", "text/javascript");
         ms_clarity.text = '(function(c,l,a,r,i,t,y){ \n'+
@@ -45,19 +57,25 @@
         'y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); \n'+
     '})(window, document, "clarity", "script", "m3ouw3z5o9");';
         document.head.appendChild(ms_clarity);
-    } else {
+    }
+    else if (readCookie('cookie-notice-rejected')=='true')
+    {
+        document.getElementById('cookie-notice').style.display = 'none';
+    } 
+    else {
         document.getElementById('cookie-notice').style.display = 'block';
     }
     document.getElementById('cookie-notice-accept').addEventListener("click",function() {
-        createCookie('cookie-notice-dismissed','true',31);
+        createCookie('cookie-notice-accepted','true',31);
         document.getElementById('cookie-notice').style.display = 'none';
         location.reload();
+        location.href="index.html";
     });
 
     document.getElementById('cookie-notice-reject').addEventListener("click",function() {
         document.getElementById('cookie-notice').style.display = 'none';
-        createCookie('cookie-notice-dismissed','true',31);
-        location.reload();
+        createCookie('cookie-notice-rejected','true',31);
+        location.href="index.html";
     });
 
 </script>
