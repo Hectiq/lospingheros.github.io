@@ -56,6 +56,7 @@
 
     document.getElementById('cookie-notice-reject').addEventListener("click",function() {
         document.getElementById('cookie-notice').style.display = 'none';
+        createCookie('cookie-notice-dismissed','true',31);
         location.reload();
     });
 
