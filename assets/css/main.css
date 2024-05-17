@@ -1733,6 +1733,20 @@ Default Tab Style
   }
 }
 
+.semi-transparent-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  height: auto;
+}
+@media (max-width: 767.98px) {
+  .semi-transparent-header {
+    top: 0;
+  }
+}
+
 .tg-header__area {
   padding: 11px 0;
   -webkit-transition: all 0.4s ease;
@@ -2095,7 +2109,7 @@ Default Tab Style
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   border-radius: 0;
-  opacity: 0;
+  opacity: 0.2;
 }
 .tg-sticky-menu.sticky-menu__show {
   -webkit-transform: unset;
@@ -2105,7 +2119,7 @@ Default Tab Style
   transform: unset;
   -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-  opacity: 1;
+  opacity: 0.2;
 }
 
 /*=============================
@@ -6499,6 +6513,14 @@ Default Tab Style
   position: relative;
   margin: 0 0 5px;
 }
+.social__item.small {
+  width: 40px;
+  height: 40px;
+}
+.social-icon-small {
+  width: 25px;
+  height: 25px;
+}
 
 
 .social__item::before {
@@ -10272,6 +10294,48 @@ blockquote p {
   color: var(--tg-common-color-black-2);
 }
 
+
+.watch_trailer {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: var(--tg-heading-font-family);
+  color: var(--tg-common-color-black-2);
+  font-weight: var(--tg-fw-extra-bold);
+  background: transparent;
+  border: none;
+  white-space: nowrap;
+  font-size: 140px;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  width: 600px;
+  height: 161px;
+  padding: 13px 22px;
+}
+@media (max-width: 767.98px) {
+  .watch_trailer {
+    width: 300px;
+    height: 73px;
+    
+    font-size: 15px;
+  }
+}
+.watch_trailer:hover {
+  color: var(--tg-common-color-black-2);
+}
+
 .callaction-button {
   display: inline-block;
   background-image:  url(../images/buttons/Button_Pingheros.png);
@@ -10361,9 +10425,61 @@ blockquote p {
 }
 
 
-iframe {
+.iframe-full {
   width: 100%;
   height: 800px;  /* Adjust height based on your design */
 }
 
+.iframe-whishlist-container {
+  width: 100%; /* Container takes full width */
+  height: 100px;
+}
+
+
+.newsletter_footer_button {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: var(--tg-heading-font-family);
+  color: var(--tg-common-color-black-2);
+  font-weight: var(--tg-fw-extra-bold);
+  background: transparent;
+  border: none;
+  white-space: nowrap;
+  font-size: 140px;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  width: 600px;
+  height: 40px;
+}
+
+.wishlist-centered {
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 30vh; /* Full viewport height */
+  width: 100%; /* Full width (optional depending on your design) */
+}
+
+@media (max-width: 767.98px) {
+  .wishlist-centered   {
+    height: auto; 
+  }
+}
+
+.iframe-container {
+  /* Add any specific styles for the iframe container if needed */
+}
 /*# sourceMappingURL=main.css.map */

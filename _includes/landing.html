@@ -12,26 +12,28 @@
     <div class="row">
     <div class="row justify-content-center ">
         <div class="col">
+          <div class="wishlist-centered">
+            <div class="iframe-container">
+              <iframe src="https://store.steampowered.com/widget/2418600/" frameborder="0" height="190" width="600"></iframe>
+            </div>
+          </div>
             <div class="grand__final-button">
-                <a href="#" class="steam_button mx-auto">
-                    <img class="wishlit-button" src="{{site.url}}/assets/images/logos/wishlist_on_steam_logo.png" alt="Button"></img>
-                </a>
+              <a href="#" class="steam_button mx-auto">
+                <img class="watch_trailer" id="trailerBtn" src="{{site.url}}/assets/images/buttons/Button_WatchTheTrailer.png" alt="Button"></img>
+              </a>
             </div>
         </div>
     </div>
     <div class="row justify-content-center mt-10">
         <div class="col-xl-6 col-lg-7 col-md-10">
           <div class="section__title text-center mt-20">
-            <button id="trailerBtn" class="callaction-button">WATCH THE TRAILER</button>
             {% include trailer.html %} 
           </div>
           <div class="section__title text-center mt-20">
-          <button id="newsletterBtn" class="callaction-button">SUBSCRIBE TO OUR NEWSLETTER </button>
           {% include newsletter.html %} 
           </div>
         </div>
       </div>
-    {% include social-area.html%}
 </div>
     
     

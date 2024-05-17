@@ -72,6 +72,8 @@ i[class*="flaticon-"] {
 }
 .flaticon-youtube:before {
     content: "\f111";
+    
+    font-size: 10px;
 }
 .flaticon-discord:before {
     content: "\f112";
@@ -193,3 +195,4 @@ i[class*="flaticon-"] {
 .flaticon-play-button:before {
     content: "\f139";
 }
+
