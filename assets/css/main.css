@@ -10430,6 +10430,10 @@ blockquote p {
   height: 800px;  /* Adjust height based on your design */
 }
 
+.iframe-full.newsletter {
+  margin-top: -20%;
+  margin-bottom: -40%;
+}
 .iframe-whishlist-container {
   width: 100%; /* Container takes full width */
   height: 100px;

@@ -19,7 +19,7 @@
           </div>
             <div class="grand__final-button">
               <a href="#" class="steam_button mx-auto">
-                <img class="watch_trailer" id="trailerBtn" src="{{site.url}}/assets/images/buttons/Button_WatchTheTrailer.png" alt="Button"></img>
+                <img class="watch_trailer" id="trailerBtn" src="{{site.url}}/assets/images/buttons/Button_WatchTheTrailer.png" alt="Button"/>
               </a>
             </div>
         </div>
@@ -30,7 +30,13 @@
             {% include trailer.html %} 
           </div>
           <div class="section__title text-center mt-20">
-          {% include newsletter.html %} 
+            <div id="newsletter_modalPage" class="modalFullScreen justify-content-center">
+              <!-- Modal content -->
+              <div class="newsletter-modal-content">
+                {% include newsletter.html %} 
+              </div>
+          </div>
+          
           </div>
         </div>
       </div>

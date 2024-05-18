@@ -6,3 +6,4 @@ layout: main
 # private: false
 ---
   
+{% include landing.html %} 

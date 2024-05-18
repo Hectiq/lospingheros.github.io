@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-layout: privacy
+layout: default
 ---
 
 ### How we process your data
