@@ -6497,30 +6497,11 @@ Default Tab Style
 }
 
 
-.social__item {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: #00000000;
-  width: 100px;
-  height: 100px;
-  position: relative;
-  margin: 0 0 5px;
-}
-.social__item.small {
-  width: 40px;
-  height: 40px;
-}
 .social-icon-small {
   width: 25px;
   height: 25px;
 }
+
 
 
 .social__item::before {
@@ -10322,14 +10303,11 @@ blockquote p {
   transition: all 0.3s ease-out 0s;
   width: 600px;
   height: 161px;
-  padding: 13px 22px;
 }
 @media (max-width: 767.98px) {
   .watch_trailer {
-    width: 300px;
-    height: 73px;
-    
-    font-size: 15px;
+    width: 400px;
+    height: 80px;
   }
 }
 .watch_trailer:hover {
@@ -10434,11 +10412,21 @@ blockquote p {
   margin-top: -20%;
   margin-bottom: -40%;
 }
-.iframe-whishlist-container {
-  width: 100%; /* Container takes full width */
-  height: 100px;
+.iframe-whishlist {
+  width: 50%; /* Container takes full width */
+  height: 220px;
+  overflow: hidden;
 }
-
+@media (max-width: 1500px) {
+  .iframe-whishlist  {
+    width: 70%;
+  }
+}
+@media (max-width: 767.98px) {
+  .iframe-whishlist   {
+    width: 85%;
+  }
+}
 
 .newsletter_footer_button {
   display: -webkit-box;
@@ -10469,21 +10457,13 @@ blockquote p {
   height: 40px;
 }
 
-.wishlist-centered {
-  display: flex; /* Enables flexbox */
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  height: 30vh; /* Full viewport height */
-  width: 100%; /* Full width (optional depending on your design) */
-}
-
 @media (max-width: 767.98px) {
-  .wishlist-centered   {
-    height: auto; 
+  .newsletter_footer_button   {
+    width: 300px;
+    height: 30px;
   }
 }
 
-.iframe-container {
-  /* Add any specific styles for the iframe container if needed */
-}
+
+
 /*# sourceMappingURL=main.css.map */
