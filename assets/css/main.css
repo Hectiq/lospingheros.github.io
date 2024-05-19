@@ -4476,7 +4476,7 @@ Default Tab Style
   transform: translateY(0px);
 }
 .gallery-active .swiper-scrollbar {
-  background: rgba(69, 248, 130, 0.49);
+  background: rgba(255, 255, 255, 0.49);
 }
 .gallery-active.swiper-container-horizontal > .swiper-scrollbar {
   border-radius: 0;
@@ -10350,6 +10350,7 @@ blockquote p {
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0,0,0,0.4); /* Black with opacity */
+  -webkit-backdrop-filter: blur(8px); /* Blur the background */
   backdrop-filter: blur(8px); /* Blur the background */
   align-items: center; /* Centers vertically in the viewport */
   justify-content: center; /* Centers horizontally in the viewport */
@@ -10464,6 +10465,27 @@ blockquote p {
   }
 }
 
+.default_bg {
+  position: relative;
+  overflow: hidden; /* Ensures no part of the pseudo-element spills outside */
+}
+
+.default_bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/images/background.jpg'); /* Adjust the path as necessary */
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px); /* Adjust the blur radius as needed */
+  z-index: -1; /* Ensures the pseudo-element is behind the content */
+}
+.default_bg::before {
+  
+}
 
 
 /*# sourceMappingURL=main.css.map */

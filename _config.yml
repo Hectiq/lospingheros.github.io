@@ -54,6 +54,10 @@ plugins:
   - jekyll-feed
 
 
+collections:
+  screenshots:
+    output: true
+
 exclude:
   - Gemfile
   - Gemfile.lock
