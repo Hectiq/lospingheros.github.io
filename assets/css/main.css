@@ -10380,6 +10380,41 @@ blockquote p {
   }
 }
 
+/* Style for the close button */
+.newsletter-close-button {
+  position: absolute;
+  top: 8%;
+  right: 27%;
+  font-size: 80px;
+  cursor: pointer;
+  color: #000; /* Making the color black or as per your design */
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.newsletter-close-button:hover {
+  color: #666; /* Hover effect for better user interaction */
+}
+
+@media (max-width: 1500px) {
+  .newsletter-close-button  {
+    top: 5%;
+    right: 22%;
+    font-size: 80px;
+  }
+}
+@media (max-width: 767.98px) {
+  .newsletter-close-button   {
+    top: 5%;
+    right: 4%;
+    font-size: 60px;
+  }
+}
+
+
+
+
 
 /* Modal Content/Box */
 .trailer-modal-content {
@@ -10449,7 +10484,6 @@ blockquote p {
   font-size: 140px;
   line-height: 1;
   position: relative;
-  z-index: 1;
   overflow: hidden;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;

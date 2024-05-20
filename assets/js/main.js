@@ -853,14 +853,19 @@ function wowAnimation() {
 var newsletter_modal = document.getElementById("newsletter_modalPage");
 var newsletter_frame = document.getElementById("newsletter_frame");
 
-// Get the button that opens the modal
+
 var newsletterBtn = document.getElementById("newsletterBtn");
+var newsletter_close = document.getElementById("newsletter-close-button");
 
 // When the user clicks the button, open the modal
 newsletterBtn.onclick = function() {
     newsletter_modal.style.display = "flex";
 }
 
+// When the user clicks on <span> (x), close the modal
+newsletter_close.onclick = function() {
+    newsletter_modal.style.display = "none";
+}
 
 /* ============================================= */
 // Get the modal trailer
