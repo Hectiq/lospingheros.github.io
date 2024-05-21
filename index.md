@@ -7,3 +7,4 @@ layout: main
 ---
   
 {% include landing.html %} 
+{% include screenshots.html %}
