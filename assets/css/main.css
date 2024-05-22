@@ -10383,33 +10383,42 @@ blockquote p {
 }
 
 /* Style for the close button */
-.newsletter-close-button {
+.iframe-full-close-button {
   float: left;
   font-size: 80px;
   visibility: visible;
-  margin-right: -5px;
-  margin-top: -35px;
   cursor: pointer;
-  color: #000; /* Making the color black or as per your design */
   background: transparent;
   border: none;
   outline: none;
 }
 
-.newsletter-close-button:hover {
+.iframe-full-close-button:hover {
   color: #666; /* Hover effect for better user interaction */
 }
 
 @media (max-width: 1500px) {
-  .newsletter-close-button  {
+  .iframe-full-close-button  {
     font-size: 80px;
   }
 }
 @media (max-width: 767.98px) {
-  .newsletter-close-button   {
+  .iframe-full-close-button   {
     font-size: 60px;
-    margin-top: -20px;
   }
+}
+
+
+.iframe-full-close-button.trailer {
+  margin-left: 117px;
+  margin-top: -43px;
+  color: #ffffff; /* Making the color black or as per your design */
+}
+
+.iframe-full-close-button.newsletter {
+  color: #000; /* Making the color black or as per your design */
+  margin-left: 15px;
+  margin-top: -15px;
 }
 
 
@@ -10444,8 +10453,10 @@ blockquote p {
 .iframe-full {
     width: 100%;
     height: 800px;
+    margin-top: 100px;
     max-height: 100%;
 }
+
 .close-button-container {
 		position: absolute;
 		visibility: hidden;

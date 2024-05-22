@@ -872,6 +872,7 @@ newsletter_close.onclick = function() {
 
 var trailer_modal = document.getElementById("trailer_modalPage");
 var trailer_frame = document.getElementById("trailer_frame_video");
+var trailer_close = document.getElementById("trailer-close-button");
 
 // Get the button that opens the modal
 var trailerBtn = document.getElementById("trailerBtn");
@@ -889,6 +890,9 @@ trailerBtn.onclick = function() {
       });
 }
 
+trailer_close.onclick = function() {
+    trailer_modal.style.display = "none";
+}
 
 // When the user clicks anywhere in the window, close the modal if it was the background that was clicked
 window.onclick = function(event) {
