@@ -10343,7 +10343,7 @@ blockquote p {
 .modalFullScreen {
   display: none; /* Hidden by default, toggle this in JavaScript */
   position: fixed; /* Stay in place */
-  z-index: 10; /* Sit on top */
+  z-index: 100; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -10360,11 +10360,13 @@ blockquote p {
 .newsletter-modal-content {
   background-color: rgba(254, 254, 254, 0); /* Fully transparent background, adjust as needed */
   width: 40%; /* Width is 40% of its container */
+  position: absolute;
+  max-width: 540px;
+  height: 100%;
   display: flex; /* Use flexbox to align inner content */
   align-items: center; /* Aligns content vertically center */
   justify-content: center; /* Aligns content horizontally center */
   text-align: center; /* Ensures text within the modal is centered */
-  padding: 20px; /* Padding around the content, uncomment if needed */
   border: 1px solid rgba(136, 136, 136, 0); /* Optional border, uncomment if needed */
 }
 
@@ -10382,10 +10384,11 @@ blockquote p {
 
 /* Style for the close button */
 .newsletter-close-button {
-  position: absolute;
-  top: 8%;
-  right: 27%;
+  float: left;
   font-size: 80px;
+  visibility: visible;
+  margin-right: -5px;
+  margin-top: -35px;
   cursor: pointer;
   color: #000; /* Making the color black or as per your design */
   background: transparent;
@@ -10399,16 +10402,13 @@ blockquote p {
 
 @media (max-width: 1500px) {
   .newsletter-close-button  {
-    top: 5%;
-    right: 22%;
     font-size: 80px;
   }
 }
 @media (max-width: 767.98px) {
   .newsletter-close-button   {
-    top: 5%;
-    right: 4%;
     font-size: 60px;
+    margin-top: -20px;
   }
 }
 
@@ -10442,13 +10442,13 @@ blockquote p {
 
 
 .iframe-full {
-  width: 100%;
-  height: 800px;  /* Adjust height based on your design */
+    width: 100%;
+    height: 800px;
+    max-height: 100%;
 }
-
-.iframe-full.newsletter {
-  margin-top: -20%;
-  margin-bottom: -40%;
+.close-button-container {
+		position: absolute;
+		visibility: hidden;
 }
 .iframe-whishlist {
   width: 50%; /* Container takes full width */
