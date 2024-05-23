@@ -891,7 +891,7 @@ trailerBtn.onclick = function() {
 }
 
 trailer_close.onclick = function() {
-    trailer_modal.style.display = "none";
+    close_trailer_video();
 }
 
 // When the user clicks anywhere in the window, close the modal if it was the background that was clicked
@@ -900,9 +900,13 @@ window.onclick = function(event) {
         newsletter_modal.style.display = "none";
     }
     if (event.target === trailer_modal) {
-        trailer_modal.style.display = "none";
-        $('#trailer_frame_video').each(function(){
-            this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
-          });
+        close_trailer_video();
     }
+}
+
+function close_trailer_video() {
+    trailer_modal.style.display = "none";
+    $('#trailer_frame_video').each(function(){
+        this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+        });
 }
